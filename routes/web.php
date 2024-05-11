@@ -27,6 +27,7 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/messages', [MessagesController::class, 'index'])->name('messages.index');
+    Route::get('/messages/{id}', [MessagesController::class, 'show'])->name('messages.show');
 });
 
 
