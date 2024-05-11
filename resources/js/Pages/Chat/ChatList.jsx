@@ -13,7 +13,7 @@ export default function ChatList({ auth, messageList }) {
                     <ChatBox {...message} />
                 ))}
             </div>
-            <FloatingButton className="h-14 w-14">
+            <FloatingButton className="h-14 w-14 right-5 bottom-5">
                 <FontAwesomeIcon icon={["fas", "comments"]} size="xl" />
             </FloatingButton>
         </AuthenticatedLayout>
