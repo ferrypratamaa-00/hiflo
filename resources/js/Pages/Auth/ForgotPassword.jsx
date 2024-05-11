@@ -22,7 +22,7 @@ export default function ForgotPassword({ status }) {
 
             <div className="mb-4 text-center text-dark dark:text-light">
                 <h5 className="mb-1 text-2xl font-bold text-primary">
-                    Lupa katasandi anda ?
+                    Lupa Kata sandi anda ?
                 </h5>
                 <p className="text-primary-600">
                     Silakan masukkan alamat email Anda, dan kami akan

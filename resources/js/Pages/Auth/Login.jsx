@@ -67,7 +67,7 @@ export default function Login({ status, canResetPassword }) {
                 <div className="mt-4">
                     <InputLabel
                         htmlFor="password"
-                        value="Password"
+                        value="Kata sandi"
                         className="text-primary"
                     />
 
@@ -105,7 +105,7 @@ export default function Login({ status, canResetPassword }) {
                             href={route("password.request")}
                             className="underline text-sm text-primary-600 hover:text-primary-600 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
                         >
-                            Lupa katasandi?
+                            Lupa Kata sandi?
                         </Link>
                     )}
 
