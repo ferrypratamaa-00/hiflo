@@ -36,7 +36,7 @@ export default function ConfirmPassword() {
 
             <form onSubmit={submit}>
                 <div className="mt-4">
-                    <InputLabel htmlFor="password" value="Password" />
+                    <InputLabel htmlFor="password" value="Kata sandi" />
 
                     <TextInput
                         id="password"
@@ -54,7 +54,7 @@ export default function ConfirmPassword() {
 
                 <div className="flex items-center justify-end mt-4">
                     <PrimaryButton className="w-full" disabled={processing}>
-                        Confirm
+                        Konfirmasi
                     </PrimaryButton>
                 </div>
             </form>
