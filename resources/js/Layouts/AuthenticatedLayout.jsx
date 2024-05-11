@@ -11,13 +11,16 @@ export default function Authenticated({ user, header, children }) {
 
     return (
         <div className="min-h-screen bg-white">
-            <nav className="bg-white border-b border-gray-100">
+            <nav className="bg-primary border-b border-gray-100 fixed w-full top-0">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between h-16">
                         <div className="flex">
                             <div className="shrink-0 flex items-center">
                                 <Link href="/">
-                                    <ApplicationLogo className="block h-9 w-auto fill-current text-gray-800" />
+                                    {/* <ApplicationLogo className="block h-9 w-auto fill-current text-gray-800" /> */}
+                                    <h5 className="text-white font-bold text-xl">
+                                        H I F L O
+                                    </h5>
                                 </Link>
                             </div>
 
@@ -83,7 +86,7 @@ export default function Authenticated({ user, header, children }) {
                                         (previousState) => !previousState
                                     )
                                 }
-                                className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-white focus:outline-none focus:bg-white focus:text-gray-500 transition duration-150 ease-in-out"
+                                className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-dark-500 hover:bg-white focus:outline-none focus:bg-white focus:text-dark-500 transition duration-150 ease-in-out"
                             >
                                 <svg
                                     className="h-6 w-6"
@@ -122,7 +125,7 @@ export default function Authenticated({ user, header, children }) {
                 <div
                     className={
                         (showingNavigationDropdown ? "block" : "hidden") +
-                        " sm:hidden"
+                        " sm:hidden bg-white"
                     }
                 >
                     <div className="pt-2 pb-3 space-y-1">
@@ -168,7 +171,7 @@ export default function Authenticated({ user, header, children }) {
                 </header>
             )}
 
-            <main>{children}</main>
+            <main className="mt-20">{children}</main>
         </div>
     );
 }
