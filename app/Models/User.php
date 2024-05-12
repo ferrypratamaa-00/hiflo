@@ -45,13 +45,23 @@ class User extends Authenticatable
         ];
     }
 
-    public function conversations()
+    public function contacts()
     {
-        return $this->belongsToMany(Conversation::class, 'participants');
+        return $this->hasMany(Contact::class);
+    }
+
+    public function notifications()
+    {
+        return $this->hasMany(Notification::class);
     }
 
     public function messages()
     {
         return $this->hasMany(Message::class);
+    }
+
+    public function conversations()
+    {
+        return $this->belongsToMany(Conversation::class, 'participants');
     }
 }
