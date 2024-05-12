@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Message\MessagesController;
+use App\Http\Controllers\Message\MessageController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -26,8 +26,8 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::get('/messages', [MessagesController::class, 'index'])->name('messages.index');
-    Route::get('/messages/{id}', [MessagesController::class, 'show'])->name('messages.show');
+    Route::get('/messages', [MessageController::class, 'index'])->name('messages');
+    Route::get('/messages/{id}', [MessageController::class, 'show'])->name('messages.show');
 });
 
 
