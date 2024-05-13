@@ -4,13 +4,16 @@ import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Head } from "@inertiajs/react";
 
-export default function ChatList({ auth, messageList }) {
+export default function ChatList({ auth, conversations }) {
     return (
         <AuthenticatedLayout user={auth.user}>
             <Head title="ChatList" />
             <div id="chat-box" className="mt-2 flex flex-col">
-                {messageList.map((message) => (
-                    <ChatBox {...message} />
+                {conversations.map((conversation) => (
+                    <ChatBox
+                        key={conversation.id}
+                        conversations={conversation}
+                    />
                 ))}
             </div>
             <FloatingButton className="h-14 w-14 right-5 bottom-5">
